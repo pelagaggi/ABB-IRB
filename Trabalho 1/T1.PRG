@@ -35,7 +35,7 @@ MODULE TESTE
   
 
   PROC main()
-    !programa realizado por Alexandre R. P. Nunes, Francisco, Gustavo Mendonça. 
+    !programa realizado por Alexandre, Juliana, Vladyslav. 
 	!data: ...
     !este programa tem por objectivo Atender ao item 1 da Ficha de trabalho
 
