@@ -7,8 +7,8 @@ MODULE TESTE
   VAR   robtarget p4  :=[[778.08,83.25,1180.04],[0.003629,0.656282,0.754506,-0.001468],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
 
   PROC main()
-    !programa realizado por Alexandre, Juliana, VladySlav
-    !este programa tem por objectivo Atender ao item 1 da Ficha de trabalho
+    ! programa realizado por Alexandre, Juliana, VladySlav
+    ! este programa tem por objectivo Atender ao item 1 da Ficha de trabalho
     ! deve Manipular uma peça do local A para o local B, e após ter regressado à posição de repouso, voltar a movimentar a peça para o local A.
     move_peca  p1, p2, p3, p4;
     move_peca  p3, p4, p1, p2;
