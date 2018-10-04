@@ -3,4 +3,4 @@ Esse repositório foi criado para versionar e compartilhar conteúdos de trabalh
 São membros do grupo.
 * Alexandre R. Pelagaggi Nunes
 * Juliana Hermsdorf
-* Vladyslav 
+* Vladyslav Buynovskyy
