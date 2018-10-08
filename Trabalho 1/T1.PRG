@@ -1,38 +1,9 @@
 MODULE TESTE
-  !------------------------------------------------------------------------------------------------------------------------------------
-  !Ponto = [ [translação] , [rotação],  [axis configuration], [external axes] ]
-  !Ponto = [ [x, y, Z] , [q1, q2, q3, q4],  [cf1, cf4, cf6, cfx], [eax_a, eax_b ... eax_f]]
-  !
-  ! Translação é expressa em mm. (X,Y,Z)
-  !   Exemplo
-  !   VAR pos p := [100,200,300];
-  ! Rotação é expressa em relação as coordenadas atuais
-  !   Exemplo
-  !   VAR orient quat1 := [1, 0, 0, 0];
-  ! Axis configuration é expresso em quartos de revolução que são movimentos de 90 graus dos eixos. (0  <=  cf  <=  4)
-  ! Exemplo
-  ! VAR confdata conf15 := [1, -1, 0, 0];
-  ! Eixos eixos lineares em mm e eixos angulares em graus
-  !   (9E+09 implica em ignorar campo e utilizar indicado nas variaveis anteriores)
-  !   Exemplo
-  !   VAR extjoint axpos10 := [ 11, 12.3, 9E9, 9E9, 9E9, 9E9] ;
-  !   11 e 12.3 podem ser mm ou graus conforme eixos, e 9E9 significa undefined
-  !
-  ! Redefinindo ponto de repouso
-  ! VAR pos       p0      := [778.08,83.25,1180.04];
-  ! VAR orient    o0      := [0.003629,0.656282,0.754506,-0.001468];
-  ! VAR confdata  conf0   := [0,-1,-4,0];
-  ! VAR extjoint  axpos0  := [9E+09,9E+09,9E+09,9E+09,9E+09,9E+09];
-  ! VAR robtarget P0      := [p0, o0, conf0, axpos0];
-  !VAR num contador:=0;  !numero de peças
-  !----------------------------------------------INICIO DO PROGRAMA--------------------------------------------------------------------------------
-
-  CONST robtarget p0:=[[778.08,83.25,1180.04],[0.003629,0.656282,0.754506,-0.001468],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p1:=[[778.08,83.25,1180.04],[0.003629,0.656282,0.754506,-0.001468],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p2:=[[778.08,83.25,1180.04],[0.003629,0.656282,0.754506,-0.001468],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p3:=[[778.08,83.25,1180.04],[0.003629,0.656282,0.754506,-0.001468],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p4:=[[778.08,83.25,1180.04],[0.003629,0.656282,0.754506,-0.001468],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  
+  CONST robtarget p0:=[[778.08,83.25,1180.03],[0.003624,0.656317,0.754476,-0.001467],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+  CONST robtarget p1:=[[758.72,-213.38,908.43],[0.167028,-0.769248,-0.60344,0.12736],[-1,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+  CONST robtarget p2:=[[787.34,-230.2,765.22],[0.255636,-0.748537,-0.581478,0.190331],[-1,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+  CONST robtarget p3:=[[782.69,295.38,823.01],[0.155228,-0.533719,-0.800599,0.223808],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+  CONST robtarget p4:=[[620.6,272.02,712.91],[0.199651,-0.493967,-0.786642,0.311979],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
 
   PROC main()
     !programa realizado por Alexandre, Juliana, Vladyslav. 
@@ -46,10 +17,11 @@ MODULE TESTE
     MoveL p2, v100, fine, PINCA1P;
     fecha_garra;
     MoveL p1, v500, z50, PINCA1P;
-    MoveJ p3, v500, fine, PINCA1P;
-    MoveL p4, v100, z50, PINCA1P;
+    MoveJ p3, v500, z50, PINCA1P;
+    MoveL p4, v100, fine, PINCA1P;
     abre_garra;
     MoveL p3, v500, z50, PINCA1P;
+
     MoveJ p0, v500, z50, PINCA1P;
 
     MoveJ p3, v500, z50, PINCA1P;
