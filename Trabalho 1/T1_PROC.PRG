@@ -17,7 +17,6 @@ MODULE TESTE
     ENDFOR
   ENDPROC
 
-
   PROC move_peca(robtarget A, robtarget B, robtarget C, robtarget D)
     abre_garra;
     MoveJ p0, v500, z50, PINCA1P;
