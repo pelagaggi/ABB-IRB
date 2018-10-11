@@ -1,24 +1,22 @@
 MODULE TESTE
-
-  CONST robtarget p0:=[[778.08,83.25,1180.03],[0.003624,0.656317,0.754476,-0.001467],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p1:=[[758.72,-213.38,908.43],[0.167028,-0.769248,-0.60344,0.12736],[-1,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p2:=[[787.34,-230.2,765.22],[0.255636,-0.748537,-0.581478,0.190331],[-1,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p3:=[[782.69,295.38,823.01],[0.155228,-0.533719,-0.800599,0.223808],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-  CONST robtarget p4:=[[620.6,272.02,712.91],[0.199651,-0.493967,-0.786642,0.311979],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-
-
+CONST robtarget p0:=[[778.08,83.25,1180.03],[0.003624,0.656317,0.754476,-0.001467],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
   PROC main()
+    CONST robtarget p1:=[[758.72,-213.38,908.43],[0.167028,-0.769248,-0.60344,0.12736],[-1,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget p2:=[[787.34,-230.2,765.22],[0.255636,-0.748537,-0.581478,0.190331],[-1,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget p3:=[[782.69,295.38,823.01],[0.155228,-0.533719,-0.800599,0.223808],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget p4:=[[620.6,272.02,712.91],[0.199651,-0.493967,-0.786642,0.311979],[0,-1,-4,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
     ! programa realizado por Alexandre, Juliana, VladySlav
     ! este programa tem por objectivo Atender ao item 1 da Ficha de trabalho
     ! deve Manipular uma peça do local A para o local B, e após ter regressado à posição de repouso, voltar a movimentar a peça para o local A.
-    VAR dnum N;
-    TPReadDnum N, "Quantas unidades?";
+    VAR dnum N:=2;
+    !TPReadDnum N, "Quantas unidades?";
 
     FOR i FROM 0 TO N DO
-      move_peca  p1, offset(p2,0,0,((N-i)*30)), p3, offset(p4,0,0,i*(30));
+      move_peca  p1, Offs(p2,0,0,((N-i)*30)), p3, Offs(p4,0,0,i*(30));
     ENDFOR
     FOR i FROM 0 TO N DO
-      move_peca  p3,offset(p4,0,0,((N-i)*30)),p1,offset(p2,0,0,i*(30)) ;
+      move_peca  p3,Offs(p4,0,0,((N-i)*30)),p1,Offs(p2,0,0,i*(30)) ;
     ENDFOR
   ENDPROC
 

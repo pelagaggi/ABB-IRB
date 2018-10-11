@@ -13,10 +13,10 @@ MODULE TESTE
     ! deve Manipular uma peça do local A para o local B, e após ter regressado à posição de repouso, voltar a movimentar a peça para o local A.
     VAR dnum N:=3;
     FOR i FROM 0 TO N DO
-      move_peca  p1, offset(p2,0,0,((N-i)*30)), p3, offset(p4,0,0,i*(30));
+      move_peca  p1, Offs(p2,0,0,((N-i)*30)), p3, Offs(p4,0,0,i*(30));
     ENDFOR
     FOR i FROM 0 TO N DO
-      move_peca  p3,offset(p4,0,0,((N-i)*30)),p1,offset(p2,0,0,i*(30)) ;
+      move_peca  p3,Offs(p4,0,0,((N-i)*30)),p1,Offs(p2,0,0,i*(30)) ;
     ENDFOR
   ENDPROC
 
