@@ -9,13 +9,12 @@ CONST robtarget p0:=[[778.08,83.25,1180.03],[0.003624,0.656317,0.754476,-0.00146
     ! programa realizado por Alexandre, Juliana, VladySlav
     ! este programa tem por objectivo Atender ao item 1 da Ficha de trabalho
     ! deve Manipular uma peça do local A para o local B, e após ter regressado à posição de repouso, voltar a movimentar a peça para o local A.
-    VAR Dnum N:=2;
     !TPReadDnum N, "Quantas unidades?";
 
-    FOR i FROM 0 TO N DO
+    FOR i FROM 0 TO 3 DO
       move_peca  p1, Offs(p2,0,0,((N-i)*30)), p3, Offs(p4,0,0,i*(30));
     ENDFOR
-    FOR i FROM 0 TO N DO
+    FOR i FROM 0 TO 3 DO
       move_peca  p3,Offs(p4,0,0,((N-i)*30)),p1,Offs(p2,0,0,i*(30)) ;
     ENDFOR
   ENDPROC
