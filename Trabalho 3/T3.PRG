@@ -17,8 +17,8 @@ MODULE TESTE
     MoveL p1, v500, fine, PINCA1P;
     MoveL p2, v500, fine, PINCA1P;
 
-    p3 := Offs(p1,0,200,0);
-    p4 := Offs(p2,0,200,0);
+    p3 := Offs(p1,0,-200,0);
+    p4 := Offs(p2,0,-200,0);
 
     FOR i FROM 1 TO N DO
       move_peca  p1, Offs(p2,0,0,((N-i)*30)), p3, Offs(p4,0,0,(i-1)*(30));
