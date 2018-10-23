@@ -21,10 +21,10 @@ MODULE TESTE
     p4 := Offs(p2,0,-200,0);
 
     FOR i FROM 1 TO N DO
-      move_peca  p1, Offs(p2,0,0,((N-i)*30)), p3, Offs(p4,0,0,(i-1)*(30));
+      move_peca  p1, Offs(p2,0,0,((N-i)*31)), p3, Offs(p4,0,0,(i-1)*(31));
     ENDFOR
     FOR i FROM 1 TO N DO
-      move_peca  p3,Offs(p4,0,0,((N-i)*30)),p1,Offs(p2,0,0,(i-1)*(30)) ;
+      move_peca  p3,Offs(p4,0,0,((N-i)*31)),p1,Offs(p2,0,0,(i-1)*(31)) ;
     ENDFOR
   ENDPROC
 
